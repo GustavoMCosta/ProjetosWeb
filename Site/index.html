@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head> <!--Cabeçalho do site-->
+    <title>Gustavo Mesquita da Costa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320px, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="Curriculo.PNG">
+</head>
+
+<body>
+    <header> <!--Barra de menu-->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio"> <!--Apresentação inicial-->
+            <div id="card-apresentacao">
+                <img id="imgPerfil" src="perfil.jpg">
+                <h2> <!--Nome-->
+                    GUSTAVO MESQUITA DA COSTA
+                </h2>
+                <h6> <!--Formação-->
+                    Técnico em informática
+                    <img src="completo.png">
+                    /
+                    Análise e Desenvolvimento de Sistemas
+                    <img src="carregando.png">
+                </h6>
+                <p> <!--EMail-->
+                    <img src="gmail.png">
+                    gustavo.mesquita.costa.2003@gmail.com
+                </p>
+                <p> <!--WhatsApp-->
+                    <img src="whatsapp.png">
+                    (21)97949-4617
+                </p>
+                <p> <!--Linkedin-->
+                    <a href="https://www.linkedin.com/in/gustavo-mesquita-3a319767/" target="_blank"><img src="linkedin.png">
+                        Linkedin
+                    </a>
+                </p>
+                <!--Currículo em PDF-->
+                <a href="curriculo.pdf" download><button type="button">Currículo</button></a>
+            </div>
+        </section>
+
+        <section id="sobre"> <!--Informações sobre-->
+            <div id="animaSobre">
+                <h2 id="animaH2">
+                    Um pouco sobre mim
+                </h2>            
+                <p id="animaP">
+                Cursei técnico em informática integrado ao ensino médio pela Faetec<br>
+                logo me apaixonei pela informática então decidi seguir nesta área.<br>
+                Hoje em dia curso Análise e Desenvolvimento de Sistemas pela Unigranrio.<br>
+                Fiz este site para mostrar na prática os mees conhecimentos no desenvolvimento Web.<br>
+                Este site será atualizado regularmente conforme eu evolua e aprendo nova técnicas,<br>
+                logo sinta-se a vontade para retornar sempre que quiser e acompanhar essa constante evolução!
+                </p>               
+            </div>
+        </section>
+
+        <section id="contato"> <!--Formulário para contato-->
+            <div>
+                <!--Recurso usado no envío do EMail--> 
+                <form id="form-contato" action="https://formsubmit.co/gustavo.mesquita.costa2003@gmail.com" method="POST">
+                    <h3>Entre em contato por aqui</h3>
+                    <fieldset> <!--Configuração do EMail-->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/Site/index.html#openModal">
+                    </fieldset>
+                    <fieldset> <!--Nome-->
+                        <input name="name" placeholder="Nome" type="text" tabindex="1" required>
+                    </fieldset>
+                    <fieldset> <!--EMail-->
+                        <input name="email" placeholder="E-Mail" type="email" tabindex="2" autocomplete="email"
+                            required>
+                    </fieldset>
+                    <fieldset> <!--Telefone-->
+                        <input name="tel" id="tel" placeholder="Cel: (xx) xxxxx-xxxx" type="tel" tabindex="3" autocomplete="tel" required>
+                        <!--Mascara do telefone-->
+                        <script>
+                            document.getElementById('tel').addEventListener('input', function (e) {
+                                var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+                                e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+                            });
+                        </script>
+                    </fieldset>
+                    <fieldset> <!--Mensagem-->
+                        <textarea name="message" placeholder="Digite sua mensagem aqui" type="text" tabindex="4" required></textarea>
+                    </fieldset>
+                    <fieldset> <!--Butão de envio-->
+                        <button name="submit" type="submit" id="contato-submit" data-submit="...Enviando">Enviar</button>
+                    </fieldset>
+                </form>
+            </div> <!--PoPup de envío do EMail-->
+            <div id="openModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>E-mail enviado com sucesso!</h2>
+                    <p class="paragrafo">Em um prazo aproximado de 7 dias, entraremos em contato.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer> <!--Copyright do criador-->
+        © Copyright Gustavo Mesquita, 2024.
+    </footer>
+</body>
+</html>
